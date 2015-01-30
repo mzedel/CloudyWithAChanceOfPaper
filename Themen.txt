@@ -1,0 +1,85 @@
+Themen
+
+- Siemens Energy
+	- nix
+
+- Biotronik
+	- nix
+
+- OpenStack
+	- Cloud Computing Platforms
+
+- Bing
+	- COSMOS (using Dryad and SCOPE)
+		- storage and computation platform
+		- private (?) / hybrid cloud computation platform
+		- machine learning as a service
+
+- SAP
+	- (SAP HANA)
+	- Cloud Anbieter
+		- SAP
+			- Models
+			- Security
+	- Cloud Modelle
+		- Private Cloud (on premise)
+		- Managed-Cloud-as-a-Service
+		- Platform-as-a-Service
+		- Software-as-a-Service
+	- Future Goal: "One Cloud Platform" (per Cloud Management Layer)
+
+- Fujitsu
+	- Human Centric Paradigm
+	- Historisches Zeugs zur Cloud
+		- Cloud als Mega-Trend
+	- Cloud Modelle
+		- Deployment Models: Private, Hosted Private, Hybrid, Public
+		- Delivery Models: IaaS, PaaS, SaaS(, BPaaS?)
+	- Herausforderungen für Unternehmen
+	- Cloud Management
+		- OpenStack
+		- Cloud Foundry
+		- Docker
+		- TOSCA
+		- Fujitsu Cloud Integration Platform
+
+- DateV
+	- Historisches Zeugs zur Cloud
+		- Gartner Hype Cycle
+	- Definition "Cloud Computing"
+		- Wikipedia
+		- BITCOM
+		- NIST
+		- Bundestag
+		- Handelsblatt
+		- etc. (u.a. DateV)
+	- Anbieter von Cloud Computing / Storage
+		- Apple iCloud
+		- Amazon Web Services S3
+		- Dropbox
+		- Google
+		- Microsoft OneDrive
+		- ...
+	- Lösungen von verschiedenen Anbietern
+		- DateV
+			- DATEVcloud Software
+			- DATEVasp
+			- DATEVnet pro mobil
+		- Microsoft
+			- Office
+			- Azure
+	- Security in der Cloud
+
+- Siemens Cloud
+	- nix
+
+- Recht
+	- ...
+
+- Bahn
+	- kommt zu spät
+	- Historisches Zeugs zur Cloud etc.
+		- Industrielle Revolutionen
+		- Cloud als Mega-Trend
+	- Betrachtungen zur Industrie 4.0
+	- Zukunftsvoraussagen
