@@ -34,12 +34,14 @@
 \usepackage{fixltx2e}
 
 \usepackage{url}
+\usepackage[utf8]{inputenc} 
+\usepackage[ngerman]{babel} 
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
 
-\title{Kartoffelsuppe in der Cloud}
+\title{Kartoffelsuppe in der Cloud - IaaS, PaaS und SaaS aus der privaten Mensa für grandioses Aroma!}
 
 \author{Tim~Sporleder und Manuel~Zedel\thanks{}}
 
@@ -102,7 +104,7 @@ IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-\section{Introduction}
+\section{Einleitung}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -118,16 +120,17 @@ IEEEtran, journal, \LaTeX, paper, template.
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8a and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+\IEEEPARstart{A}{ufgrund} der breiten Verfügbarkeit von Netzwerkinfrastruktur und dem so möglichen Zugang zu IT-Ressourcen über diese Netzwerke wird das Betriebsmodell vieler Systeme geändert. Das Cloud Computing wird laut NIST durch fünf wesentliche Bestandteile definiert - die bereits erwähnte breite Verfügbarkeit von Netzwerkinfrastruktur sowie der Zugriff darauf, die schnelle und einfache Skalierbarkeit der Leistung und Reichweite von Rechenressourcen, das Zusammenfassen von Pools ebendieser Ressourcen, sowie die Nutzbarkeit nach dem eigenem Bedarf und schließlich die Verbrauchs-gemäße Abrechnung der Ressourcen.
 
-\hfill mds
- 
-\hfill September 17, 2014
+Dabei wird durch das NIST wie auch im allgemeinen Gebrauch in vier verschiedene Service Modelle im Cloud Computing in Infrastructure as a Service, Platform as a Service und Software as a Service unterteilt. Die Ausprägungen dieser Service Modelle sind jedoch mitunter Anbieter-spezifisch.
+
+Zudem können diese Dienste auf unterschiedliche Weisen abgerufen werden, die Unterscheidung in Private und Public Cloud stellt hierbei eine gebräuchliche Unterteilung dar, auch an diesem Punkt gibt es Anbieter-spezifische Auffassungen bei der Einteilung der bereitgestellten Lösungen. Durch das NIST erfolgt so z.B. neben der Unterscheidung in Private und Public Cloud auch noch die Einteilung in Community und Hybrid Cloud.
+
+Mit der zunehmenden Anzahl der Anbieter von Cloud Diensten entstehen auch immer neue Möglichkeiten Cloud-Dienste zu kreieren und darauf zuzugreifen. So könnte beispielsweise durch die Möglichkeit dedizierte virtuelle CPUs zu nutzen, die Public Cloud für den Betreiber einer Private Cloud interessanter werden. In dieser Arbeit sollen die speziellen Anforderungen an die jeweilige Serviceform erörtert und daraus resultierende Vorteile beim Betrieb in einer Private, respektive Public, Cloud aufgezeigt werden um eine zeitgemäße Empfehlung bei der Entscheidung für oder gegen das jeweilige Betriebsmodell zu geben. 
+
+Um die verschiedenen Service Modelle genauer zu untersuchen sollen sie zunächst definiert werden und exemplarisch die Unterschiede bei dieser Definition zwischen verschiedenen Herstellern aufgezeigt. Im Anschluss erfolgt die selbige Herangehensweise zur Definition der Eigenschaften von Private und Public Clouds sowie die weiteren Ausprägungsformen der Betriebsmodelle. Auf dieser Grundlage werden die verschiedenen Service Modelle unter Beachtung typischer Einsatzzwecke auf die Möglichkeit der Nutzung im Rahmen der verschiedenen Betriebsmodelle überprüft.
+
+\hfill 27. Februar, 2014
 
 \subsection{Subsection Heading Here}
 Subsection text here.
@@ -137,6 +140,50 @@ Subsection text here.
 
 \subsubsection{Subsubsection Heading Here}
 Subsubsection text here.
+
+
+\section{$\{I|P|S\}$aaS}
+\IEEEPARstart{Ü}{}blicherweise wird Cloud Computing als Schichtenmodell beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
+
+Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sich der Zusammenhang jedoch leicht anhand einer Analogie mit der Berliner S-Bahn: Die Schienen bilden die Infrastruktur, die darauf befindlichen Züge stellen die Plattform dar und das S-Bahn Personal, welches die Züge betreibt und so Fahrgäste transportiert dient als Software, welche die ihr zugewiesenen Schienen und Züge nutzt. Im Fall eines Schienenbruchs könnten die Züge auf anderen Strecken zum Einsatz kommen und das Personal könnte auf anderen Verbindungen eingesetzt werden um Fahrgäste zu transportieren. 
+
+Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde.
+
+Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen.
+ 
+\subsection{Infrastructure as a Service}
+Subsection text here.
+
+\subsection{Platform as a Service}
+Subsection text here.
+
+\subsection{Software as a Service}
+Subsection text here.
+
+\subsection{Whatever as a Service}
+und dazwischen gibts auch noch:
+
+
+
+\section{Private vs. Public}
+All my clouds are belong to you!
+
+\subsection{Private Cloud}
+Subsection text here.
+
+\subsection{Public Cloud}
+Subsection text here.
+
+\subsection{Hybrid Cloud}
+Subsection text here.
+
+
+
+\section{Private vs. Publicly as a Service}
+All my services are belong to you!
+
+\subsection{Whatever as a Service auf meinem PC in der VM bei Goomazoft}
+ich schiebe meine VM dank OpenStack zur Konkurrenz und bin trotzdem der King of my Castle
 
 
 % An example of a floating figure using the graphicx package.
@@ -234,12 +281,15 @@ Subsubsection text here.
 % \fnbelowfloat command of the stfloats package.
 
 
+\section{Verwandte Arbeiten}
+Bing
+SAP
+Fujitsu
+HP
+Kontext
 
-
-\section{Conclusion}
-The conclusion goes here.
-
-
+\section{Zusammenfassung}
+Cloud.. mit Kartoffeln, als Suppe, aus dem Topf - Junge!
 
 
 
