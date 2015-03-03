@@ -120,7 +120,7 @@ IEEEtran, journal, \LaTeX, paper, template.
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{A}{ufgrund} der breiten Verfügbarkeit von Netzwerkinfrastruktur und dem so möglichen Zugang zu IT-Ressourcen über diese Netzwerke wird das Betriebsmodell vieler Systeme geändert. Das Cloud Computing wird laut NIST durch fünf wesentliche Bestandteile definiert - die bereits erwähnte breite Verfügbarkeit von Netzwerkinfrastruktur sowie der Zugriff darauf, die schnelle und einfache Skalierbarkeit der Leistung und Reichweite von Rechenressourcen, das Zusammenfassen von Pools ebendieser Ressourcen, sowie die Nutzbarkeit nach dem eigenem Bedarf und schließlich die Verbrauchs-gemäße Abrechnung der Ressourcen.
+\IEEEPARstart{A}{ufgrund} der breiten Verfügbarkeit von Netzwerkinfrastruktur und dem so möglichen Zugang zu IT-Ressourcen über diese Netzwerke wird das Betriebsmodell vieler Systeme geändert. Das Cloud Computing wird laut NIST durch fünf wesentliche Bestandteile definiert - die bereits erwähnte breite Verfügbarkeit von Netzwerkinfrastruktur sowie der Zugriff darauf, die schnelle und einfache Skalierbarkeit der Leistung und Reichweite von Rechenressourcen, das Zusammenfassen von Pools ebendieser Ressourcen die mehreren Nutzern zur Verfügung gestellt werden, sowie die Nutzbarkeit nach dem eigenem Bedarf und schließlich die Verbrauchs-gemäße Abrechnung der Ressourcen.
 
 Dabei wird durch das NIST wie auch im allgemeinen Gebrauch in vier verschiedene Service Modelle im Cloud Computing in Infrastructure as a Service, Platform as a Service und Software as a Service unterteilt. Die Ausprägungen dieser Service Modelle sind jedoch mitunter Anbieter-spezifisch.
 
@@ -145,46 +145,72 @@ Subsubsection text here.
 \section{$\{I|P|S\}$aaS}
 \IEEEPARstart{Ü}{}blicherweise wird Cloud Computing als Schichtenmodell beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
 
-Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sich der Zusammenhang jedoch leicht anhand einer Analogie mit der Berliner S-Bahn: Die Schienen bilden die Infrastruktur, die darauf befindlichen Züge stellen die Plattform dar und das S-Bahn Personal, welches die Züge betreibt und so Fahrgäste transportiert dient als Software, welche die ihr zugewiesenen Schienen und Züge nutzt. Im Fall eines Schienenbruchs könnten die Züge auf anderen Strecken zum Einsatz kommen und das Personal könnte auf anderen Verbindungen eingesetzt werden um Fahrgäste zu transportieren. 
+Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sich der Zusammenhang jedoch leicht anhand einer Analogie mit der Berliner S-Bahn: Die Schienen bilden die Infrastruktur, die darauf befindlichen Züge stellen die Plattform dar und das S-Bahn Personal, welches die Züge betreibt und so Fahrgäste transportiert dient als Software, welche die ihr zugewiesenen Schienen und Züge nutzt. Im Fall eines Schienenbruchs könnten die Züge auf anderen Strecken zum Einsatz kommen und das Personal könnte auf anderen Verbindungen eingesetzt werden um Fahrgäste zu transportieren.
 
-Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde.
+Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde. Als Beispiel einer Infrastruktur die auch gleichzeitig als Plattform fungiert wäre z.B. eine Rolltreppe als Analogie zu betrachten.
 
 Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen.
  
 \subsection{Infrastructure as a Service}
-Subsection text here.
+Infrastructure as a Service (IaaS) bezeichnet üblicherweise die Bereitstellung von Serverleistung und den dazugehörigen Betriebssystemen, dem Speicherplatz sowie der Netzwerkinfrastruktur. Im Gegensatz zum Kauf der Serverfläche, der Server selber, der Betriebssysteme und deren zugehöriger Software, der zugehörigen Infrastruktur etc. werden hier die benötigten Ressourcen nur nach tatsächlicher Nutzung berechnet.
+
+IaaS stellt für gewöhnlich die Ressourcen ohne Einschränkungen für die Anzahl der Nutzer als Dienst bereit und erlaubt es die bezogene Leistung dynamisch zu skalieren. Mit der Skalierung des genutzten Services wird üblicherweise auch die Berechnungsgrundlage geändert - vergleichbar mit der Berechnung von Strom- oder Gaskosten.
+
+Indem IaaS Anbieter mehr und mehr Konfigurationsunterstützung in Form von Tools und automatisierten Vorgängen bereitstellen, wird die Grenze zur Platform as a Service (PaaS) zunehmend verschoben. Zudem erlauben offene Standards und universell einsetzbare Tools die flexible Kombination von lokal gehosteten Systemen mit denen die durch einen öffentlichen IaaS Anbieter bezogen werden, was als Hybrid Cloud bezeichnet werden kann [Verweis auf ].
+
+Aufgrund der weitgehenden Freiheit eines Nutzers bei der Handhabung der genutzten Ressource steht es meist frei Server im Rahmen der Unterstützten Betriebssysteme nach Belieben anzupassen. Im Vergleich zu den noch folgenden Service Modellen Platform- und Software as a Service bietet IaaS damit die höchste Flexibilität und erlaubt z.B. den Einsatz von höchst spezialisierter Software.
+
+Durch die Bereitstellung der bloßen Infrastruktur-Ressourcen beschränkt sich bei diesem Service Modell auch die Service Level Garantie nur auf die Verfügbarkeit der Ressourcen sowie die time to provision einer neuen Einheit. Je nach Ressourcentyp kann dabei jedoch die Garantie für Funktionen die nicht dem Kern des Dienstes entsprechen ausdrücklich verneint werden - so z.B. die Sicherheit der Daten bei einer virtuellen Server Instanz im Vergleich zu der Sicherheit bei einem reinen Cloud Speicheranbieter. Die Verantwortung zur Wahrung solcher Interessen obliegt hier zum größten Teil dem Nutzer. Zudem bedeutet die Nutzung einer nicht eigenen Infrastruktur in der Regel auch eine zunehmende Latenz der errechneten Ergebnisse, sowie einen erhöhten Zeitaufwand beim laden der zu verarbeitenden Daten.
+
+Sinnvoll erscheint die Nutzung von IaaS daher vor allem wenn die dynamische Skalierung der Ressourcen nötig ist, d.h. wenn kurzzeitig eine verstärkte Nachfrage auftritt oder ein plötzlich auftretendes Wachstum der Nutzerbasis eine solche Skalierung verlangt. Zudem ist IaaS für Unternehmen interessant deren Kapitalressourcen nicht ausreichen um die nötige Menge an Hardware zu beschaffen um die für die Geschäftsidee nötigen Systeme zu betreiben. Überdies kann IaaS häufig auch bei Testprojekten oder nur ausgewählten Geschäftsgebieten machen, sodass der Betrieb eines Unternehmens allein auf Basis von IaaS nicht nötig ist.
+
+Von IaaS als Lösung ist jedoch abzuraten wenn die zuvor erwähnten Nachteile überwiegen, d.h. eine sehr große Datensicherheit nötig ist oder die Gesetzeslage es verbietet Daten außerhalb der eigenen Unternehmensgrenzen zu lagern. Auch wenn es sich vor allem um die hochperformante Verarbeitung von großen Datenmengen handelt, die nicht direkt für die auf dem IaaS laufende Anwendung zugänglich ist, ist der zeitliche Mehraufwand beim Datentransfer zu bedenken und eine dedizierte Lösung eventuell besser geeignet. 
 
 \subsection{Platform as a Service}
-Subsection text here.
+Platform as a Service (PaaS) erweitert die Möglichkeiten des IaaS um Entwicklungsspezifische Punkte, sodass ein PaaS Anbieter für gewöhnlich vorkonfigurierte Entwicklungs- und Laufzeitumgebungen anbietet, die nach Bedarf in der Leistung und Größe skaliert werden können. Wie bei IaaS ist es nicht nötig die Hardware auf der die Software laufen soll zu kaufen, diese wird als Teil des Services gestellt. PaaS Anbieter müssen dank der Möglichkeiten von IaaS nicht einmal selber Infrastruktur besitzen, sondern können sich auf die Optimierung der für ihr PaaS Geschäft nötigen Software konzentrieren. 
+
+Die Leistung einer PaaS besteht dabei jedoch nicht in der Bereitstellung der Software als solches, sondern der Plattform die durch die Software des Anbieters betrieben wird. Üblicherweise bietet ein PaaS Unterstützung für die Entwicklung, das Testen, die Veröffentlichung, den Betrieb sowie die Wartung von Anwendungen in der selben Entwicklungsumgebung. Der Zugriff auf die Umgebung ist dabei multi-tenant fähig, sodass speziell agile Entwicklungsmethoden mit verteilten Entwicklerteams unterstützt werden. 
+
+Die Entwicklungsunterstützung kann dabei in Form von vordefinierten UI Elementen, vorkonfiguriertem Load-Balancing und Skalierungsmaßnahmen bis hin zur Integration mit anderen Webdiensten, Datenbank und Hardware erfolgen. Aufgrund der zunehmenden Verbreitung von Standards in der Entwicklung ist es zudem leicht möglich diese vordefinierten Funktionen zu erweitern. 
+
+Meistens unterscheiden sich die verschiedenen Plattformen im Ausmaß der Vorarbeit bzw. der Konfigurierbarkeit, diese kann von der Entwicklungsumgebungen reichen, bei denen allein die Laufzeitumgebung sowie die Kontrolle über die Leistungsfähigkeit der angeforderten Instanz gegeben wird bis hin zu vorkonfigurierten, komplexen UI Elementen zur Verarbeitung von bereitgestellten Daten, mit denen ohne Programmieraufwand eine Anwendung entwickelt werden kann.
+
+Aufgrund des Fokus' auf die Entwicklungsunterstützung bietet PaaS auch hier den größten Vorteil, da komplexe IT Anwendungen häufig von komplexen Entwicklungsstrukturen begleitet werden. Damit einher gehend ist die Nutzung von PaaS ebenfalls für Entwicklungen mit automatisierten Tests und häufigen Iterationen zu empfehlen, da der hohe Automatisierungsgrad eine ständige Neuinstallation stark vereinfacht und somit die dabei auftretenden Probleme von Beginn an behandelt werden können.
+
+Allerdings gilt es bei PaaS den Einsatzzweck auf die Nutzbarkeit mit einem PaaS zu überprüfen sowie bei der vom PaaS verwandten Technologie darauf zu achten ob man einem Vendor lock-in entgehen könnte. Wie auch bei IaaS ist auch hier die Performancebetrachtung wichtig, da die standardisierten Umgebungen wenig Spielraum zulassen, spezielle Betriebssystemfunktionen oder Fremdsoftware zu nutzen bzw. anzupassen, im Gegensatz zu IaaS gilt diese Limitierung auch beim Betrieb einer eigenen PaaS Umgebung.
 
 \subsection{Software as a Service}
 Subsection text here.
+1
 
 \subsection{Whatever as a Service}
 und dazwischen gibts auch noch:
-
+1
 
 
 \section{Private vs. Public}
-All my clouds are belong to you!
+All my clouds are belong to you! 
 
 \subsection{Private Cloud}
 Subsection text here.
+1
 
 \subsection{Public Cloud}
 Subsection text here.
+1
 
 \subsection{Hybrid Cloud}
 Subsection text here.
-
+1
 
 
 \section{Private vs. Publicly as a Service}
 All my services are belong to you!
+1
 
 \subsection{Whatever as a Service auf meinem PC in der VM bei Goomazoft}
-ich schiebe meine VM dank OpenStack zur Konkurrenz und bin trotzdem der King of my Castle
-
+----
+1
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -290,7 +316,7 @@ Kontext
 
 \section{Zusammenfassung}
 Cloud.. mit Kartoffeln, als Suppe, aus dem Topf - Junge!
-
+1
 
 
 % if have a single appendix:
