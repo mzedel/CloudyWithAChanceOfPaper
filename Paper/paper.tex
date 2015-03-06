@@ -180,28 +180,60 @@ Aufgrund des Fokus' auf die Entwicklungsunterstützung bietet PaaS auch hier den
 Allerdings gilt es bei PaaS den Einsatzzweck auf die Nutzbarkeit mit einem PaaS zu überprüfen sowie bei der vom PaaS verwandten Technologie darauf zu achten ob man einem Vendor lock-in entgehen könnte. Wie auch bei IaaS ist auch hier die Performancebetrachtung wichtig, da die standardisierten Umgebungen wenig Spielraum zulassen, spezielle Betriebssystemfunktionen oder Fremdsoftware zu nutzen bzw. anzupassen, im Gegensatz zu IaaS gilt diese Limitierung auch beim Betrieb einer eigenen PaaS Umgebung.
 
 \subsection{Software as a Service}
-Subsection text here.
-1
+Software as a Service (SaaS) bildet die oberste Schicht in der schichtweisen Betrachtung des Cloud Computing und wird so auch häufig durch die Nutzung einer der beiden darunter liegenden Schichten realisiert. Im Vergleich zu den vorherigen Modellen ist die so angebotene Software von den darunter befindlichen Strukturen abstrahiert und für Endnutzer zugänglich. Software die als SaaS angeboten wird, kann vom Nutzer über ein Netzwerk genutzt werden und verlangt so keine Installation. Diese Auslieferungsmethode bringt zudem den Vorteil, dass Nutzer sich nicht mehr um die Wartung der Software kümmern müssen und bei der Entwicklung von einer deutlich geringeren Versionsfragmentierung ausgegangen werden kann. Wie auch bei den vorangegangenen Schichten wird die SaaS Schicht durch APIs erweiterbar gehalten und nutzt für gewöhnlich fremde APIs um realisiert zu werden.
+
+Vor allem durch den hohen Grad an Standardisierung der Software bietet sich die Nutzung von SaaS für grundlegende Softwaresysteme an, die nicht zum Kernbereich des jeweiligen Unternehmens zählen, email- sowie CRM-Systeme stellen hier ein gängiges Beispiel für den SaaS Einsatz dar. Derartige Systeme sind typischerweise für den laufenden Betrieb eines Unternehmens wichtig, bieten jedoch selten einen großen Wettbewerbsvorteil bei eigenen Anpassungen. Durch die Vereinbarung von Service Level Agreements ist es vor allem möglich eine gute Erreichbarkeit der Lösung zu gewährleisten - üblicherweise liegt die zugesicherte Erreichbarkeit der Systeme bei 99\% und höher. Auch hier werden derartige Dienste entsprechend der Nutzungsdauer bezahlt.
+
+Die leichten Skalierungsmöglichkeiten der einer SaaS Lösung zugrunde liegenden Cloud Infrastruktur erweist sich als weiterer Indikator auf den Einsatz einer solchen Lösung zu setzen. Ist es zu erwarten, dass die Software nur über kurze Zeiträume unter hoher Last stehen wird, wie z.B. bei Verkaufssystemen vor Weihnachten oder zu Beginn eines neuen Jahres. Auch wenn die Nutzung der Software nur für einen begrenzten Zeitraum benötigt wird, bietet sich die Verwendung von SaaS an. Ebenso kann das über ein Netzwerk erfolgende Angebot der Software ausgenutzt werden, da Anwendungen mit einem hohen Grad an Interaktion mit anderen Systemen leichter mit diesen sowie weiteren Diensten kommunizieren können. Mit Blick auf die zunehmende Verbreitung der mobilen Internet Nutzung sowie der verbreiteten Unterstützung verschiedener Anzeigegrößen im SaaS Umfeld, ist der Einsatz einer SaaS Lösung auch von Interesse wenn ein möglichst nahtloser Übergang zwischen verschiedenen Gerätetypen gewährleistet werden soll, da die SaaS-Anwendung die selbe bleibt und so z.B. keine Brüche im Datenbestand auftreten. Nicht zuletzt ist eine SaaS Lösung zu empfehlen wenn die Versionsfragmentierung minimal gehalten werden soll.
+
+Im Gegenzug bietet sich eine SaaS Lösung nicht an wenn die benötigte Funktion bereits durch eine existierende on-premise abgedeckt wird, d.h. bestehende Systeme durch eine SaaS Einführung nicht weiter genutzt werden würden. Ebenso stellt, wie auch bei der IaaS, die Gesetzgebung oder die Firmengrundsätze eine Entscheidungsgrundlage dar, ist vor allem bei einer öffentlichen SaaS Lösung nicht auszuschließen, dass Daten das Land oder das Firmennetzwerk verlassen. Und ebenfalls wie bei der IaaS zutreffend ist auch bei SaaS die nötige Verarbeitungsgeschwindigkeit entscheidend, die sofortige Verarbeitung anfallender Echtzeitdaten kann bei SaaS nicht immer gewährleistet sein und so eine on-premise Lösung erstrebenswerter machen.
 
 \subsection{Whatever as a Service}
-und dazwischen gibts auch noch:
-1
+Business Process as a Service, Cloud Setup as a Service? und: Bockwurst!
+0,5
 
 
 \section{Private vs. Public}
-All my clouds are belong to you! 
-
-\subsection{Private Cloud}
-Subsection text here.
-1
+All my clouds are belong to you!
 
 \subsection{Public Cloud}
+Anbieter von IT Ressourcen als SaaS, PaaS und speziell als IaaS müssen die Rechenleistung in Form von Rechenzentren bereitstellen, um die Verfügbarkeit dieser Ressourcen über weite Strecken zu gewährleisten, erfolgt dies in der Regel über Orts- und Ländergrenzen hinweg. Im Fall einer public Cloud befindet sich die zugrundeliegende Schicht im Eigentum des jeweiligen Cloud Anbieters.
+
+Diese Ressourcen werden mehreren Kunden zur Verfügung gestellt, was zu einer Kostenreduktion für den einzelnen Nutzer führt und die vorhandenen Kapazitäten besser ausnutzt - z.b. indem die nicht benötigte Leistung eines Kunden sinnvoll mit dem Abfangen eines hohen Leistungsbedarfs eines anderen Kunden kombiniert werden kann.
+Im Gegenzug bedeutet diese Ressourcenteilung jedoch z.B. auch die gemeinsame Nutzung von Speicher bzw. die geringere Kontrolle über die eingesetzte Software und die so verarbeiteten Daten.
+
+Die vorgestellten Service Modelle (IaaS, PaaS und SaaS) sind alle sowohl als private als auch als public Lösung zu finden.
+
+Auch das Angebot der Public Cloud bietet weitere Unterscheidungsmöglichkeiten in Bezug auf die Hosting Form.
+
+\subsubsection{Shared Public Cloud}
+Wird der Service auf einer mit mehreren Benutzern geteilten Schicht betrieben, deren Architektur, Absicherung und Verwaltung durch den Anbieter erfolgt, wird von einer Shared Public Cloud gesprochen. Auch die Anpassbarkeit wird hier durch den Anbieter vorgegeben. Durch diese Bedingungen ist es möglich besonders günstige Kosten für den Betrieb zu veranschlagen und den Umfang der Serviceleistung nach Bedarf zu skalieren. 
+
+\subsubsection{Dedicated Public Cloud/ Virtual Private Cloud}
+Das direkte Gegenstück zur Shared Public Cloud bildet die Dedicated Public Cloud, bei der ein Teil der Ressourcen der Shared Public Cloud einem Kunden dediziert zur Verfügung gestellt werden. Durch den Ausschluss weiterer Nutzer der selben Infrastruktur bietet sich häufig eine bessere Leistungsfähigkeit als bei der Shared Public Cloud, ebenso können meist mehr Sicherheitsmaßnahmen getroffen werden und anderweitige Anpassungen des Dienstes vorgenommen werden. Auch wenn es sich um dedizierte Systeme handelt, erfolgt das Hosting der Dienste auf Systemen im Besitz des Anbieters.
+
+\subsection{Private Cloud}
+Die IT Ressourcen werden bei einer Private Cloud exklusiv für einen Kunden bereitgestellt. Damit können Anforderungen an Sicherheit, Privatsphäre im hohen Maß erfüllt werden und das Vertrauen in die Cloud Lösung erhöht werden. Dazu bietet eine derartige Lösung die Möglichkeit innerhalb des zur Verfügung stehenden Vorrats an Ressourcen nach Bedarf zu skalieren und diese Ressourcen so bestmöglich zu nutzen.
+
+Die Verwendung einer privaten Cloud Lösung bietet sich vor allem an, wenn das Gesetzes- oder Unternehmensumfeld strenge Vorgaben an den Betrieb der IT stellt oder das Vertrauen in einen passenden Cloudanbieter nicht ausreicht um die nötige Lösung in dessen Public Cloud zu hosten. 
+
+Wie auch bei der Public Cloud kann die Private Cloud anhand der Hosting Form unterschieden werden.
+
+\subsubsection{Self-Hosted Private Cloud}
+Die Self-Hosted Private Cloud stellt auf Basis der bestehenden Systeme und Services eine im Rahmen dieser skalierbare Cloud Umgebung. Dadurch behält man die volle Kontrolle über die Systeme, kann die Architektur nach Belieben anpassen und die Auslastung der Systeme maximieren.
+
+\subsubsection{Hosted Private Cloud}
+Im Vergleich zur Dedicated Public Cloud/ Virtual Private Cloud, ist die Hosted Private Cloud zwar ebenfalls im Data-Center eines Cloudanbieters angesiedelt und wird mittels der Dienste dieses Anbieters betrieben, allerdings können die dazu nötigen Systeme vom Kunden angepasst werden und werden durch den Kunden dediziert gemietet. Durch diese Konstellation lässt sich der Vorteil einer in einem Data-Center befindlichen Lösung mit der Kontrolle wie bei einer Self-Hosted Private Cloud kombinieren.
+
+\subsubsection{Private Cloud Appliance}
+Bei einer Private Cloud Appliance wird eine von einem Cloudanbieter entworfene und angepasste Cloudumgebung beim Kunden installiert und durch diesen oder den Cloudanbieter selbst gewartet. Dadurch ist es möglich die Interoperabilität der Dienste des Cloudanbieters nutzen zu können ohne die Sicherheit oder die Kontrolle über die Daten einzuschränken, allerdings ist die Skalierung meist nur im Rahmen der vorhandenen Umgebung möglich.
+
 Subsection text here.
-1
+0,5
 
 \subsection{Hybrid Cloud}
 Subsection text here.
-1
+0,5
 
 
 \section{Private vs. Publicly as a Service}
