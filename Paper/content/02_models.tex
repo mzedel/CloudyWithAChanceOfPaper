@@ -1,13 +1,38 @@
 \section{$\{I|P|S\}$aaS}
 \label{sec_service_models}
 
-\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
+\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
+
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/serviceModels}
+	\caption{Übersicht Schichten der Servicemodelle}
+	\label{fig:serviceModels}
+\end{figure*}
 
 Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sich der Zusammenhang jedoch leicht anhand einer Analogie mit der Berliner S-Bahn: Die Schienen bilden die Infrastruktur, die darauf befindlichen Züge stellen die Plattform dar und das S-Bahn Personal, welches die Züge betreibt und so Fahrgäste transportiert dient als Software, welche die ihr zugewiesenen Schienen und Züge nutzt. Im Fall eines Schienenbruchs könnten die Züge auf anderen Strecken zum Einsatz kommen und das Personal könnte auf anderen Verbindungen eingesetzt werden um Fahrgäste zu transportieren.
 
 Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde. Als Beispiel einer Infrastruktur die auch gleichzeitig als Plattform fungiert wäre z.B. eine Rolltreppe als Analogie zu betrachten.
 
 Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen.
+
+\begin{figure*}
+	\centering
+	\caption{Übersicht der Service Arten}
+	\label{serivceModelsTable}
+	\begin{tabular}{|l|>{\RaggedRight}p{2cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|}
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} & \textbf{Paradigmen- wechsel} & \textbf{Merkmale} & \textbf{Vorteile} & \textbf{Nachteile \newline und Risiken} & \textbf{Nicht zu empfehlen bei} \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} IaaS & Besitzverhältnis der Infrastruktur & Üblicherweise plattformunabhängig; Infrastruktur-kosten werden geteilt und so reduziert; Service Level Agreements; Nutzungsabhängige Kosten; automatisch skalierend & Kapitalausgaben für Hardware und Betriebspersonal können umgangen werden; ROI Risiken werden verschoben; niedrige Einstiegshürden; optimierte und automatisierte Skalierung & Geschäftsproduktivität und -effizienz hängt stark von den Fähigkeiten des Cloudanbieters ab; potentiell höhere Langzeitkosten; Zentralisierung erfordert neue Sicherheitsmaßnahmen & Größerem Barvermögen als operativem Budget \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} PaaS & Lizenzierung & Nutzt Cloud Infrastruktur; eignet sich besonders für agiles Projektmanagement & optimierte Produktveröffentlichung & Zentralisierung erfordert neue Sicherheitsmaßnahmen & - \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} SaaS & Besitzverhältnis der Software & Service Level Agreements; Oberfläche meist durch Browser dargestellt; greift auf weitere Cloud Komponenten zu; Kommunikation durch APIs; Zustandslos & Entwicklungskosten können umgangen werden; ROI Risiken werden verschoben; iterative Updates; optimierte Aktualisierung & Zentralisierung der Daten erfordert neue Maßnahmen für die Datensicherheit & - \\ 
+		\hline 
+	\end{tabular}
+\end{figure*}
+ 
  
 \subsection{Infrastructure as a Service}
 Infrastructure as a Service (IaaS) bezeichnet üblicherweise die Bereitstellung von Serverleistung und den dazugehörigen Betriebssystemen, dem Speicherplatz sowie der Netzwerkinfrastruktur. Im Gegensatz zum Kauf der Serverfläche, der Server selber, der Betriebssysteme und deren zugehöriger Software, der zugehörigen Infrastruktur etc. werden hier die benötigten Ressourcen nur nach tatsächlicher Nutzung berechnet.
@@ -46,15 +71,36 @@ Die leichten Skalierungsmöglichkeiten der einer SaaS Lösung zugrunde liegenden
 
 Im Gegenzug bietet sich eine SaaS Lösung nicht an wenn die benötigte Funktion bereits durch eine existierende on-premise abgedeckt wird, d.h. bestehende Systeme durch eine SaaS Einführung nicht weiter genutzt werden würden. Ebenso stellt, wie auch bei der IaaS, die Gesetzgebung oder die Firmengrundsätze eine Entscheidungsgrundlage dar, ist vor allem bei einer öffentlichen SaaS Lösung nicht auszuschließen, dass Daten das Land oder das Firmennetzwerk verlassen. Und ebenfalls wie bei der IaaS zutreffend ist auch bei SaaS die nötige Verarbeitungsgeschwindigkeit entscheidend, die sofortige Verarbeitung anfallender Echtzeitdaten kann bei SaaS nicht immer gewährleistet sein und so eine on-premise Lösung erstrebenswerter machen.
 
-\subsection{Whatever as a Service}
-Business Process as a Service, Cloud Setup as a Service? und: Bockwurst!
-0,5
+\subsection{Everything as a Service}
+Neben den hier aufgeführten Modellen wird das Servicemodell auch in anderen Formen in Verbindung zum Cloud Computing gebracht, so gibt es die Möglichkeit Business Process as a Service zu nutzen um z.B. weitere Teile des Tagesgeschäfts automatisieren zu können, zudem werden auch die eventuell nötigen Schritte zur Skalierung oder zum Start einer Cloudlösung angeboten und als Cloudsetup as a Service vertrieben. Der Computing Aspekt ist dabei weit weniger im Vordergrund als bei den vorangegangenen Modellen. Überdies gibt es Spezialisierungen der Modelle, sodass der Betrieb angepasster Datenbanken als Database as a Service betrieben wird oder Plattformen die mit minimalem Aufwand zur vollständigen Software as a Service aufgebaut werden können, wofür Wordpress as a Service beispielhaft ist.
 
 
 \section{Private vs. Public}
 \label{sec_privacy_models}
 
-\IEEEPARstart{A}{ll} my clouds are belong to you!
+\IEEEPARstart{U}{nabhängig} von der Serviceform erfolgt die Einteilung zudem nach der Art der Bereitstellung eines Clouddienstes. Dabei richtet sich die Unterscheidung nach dem Eigentumsverhältnis der zugrundeliegenden Systeme und dem damit verbundenen Grad an Anpassbarkeit. Die Anpassbarkeit bezieht sich dabei sowohl auf die Architektur als auch auf die des jeweiligen Dienstes. 
+
+Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
+
+\begin{figure*}
+	\centering
+	\caption{Deployment Arten Übersicht}
+	\label{deploymentTypesTable}
+	\begin{tabular}{|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{1.6cm}|>{\RaggedRight}p{2.2cm}|>{\RaggedRight}p{2.5cm}|>{\RaggedRight}p{2.7cm}|>{\RaggedRight}p{3cm}|}
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} \textbf{Art der \newline  Bereitstellung} & \textbf{Hosting} & \textbf{Geteilt oder Dediziert} & \textbf{Kontrolle über Architektur} & \textbf{Skalierbarkeit} & \textbf{Art der Investition} \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} Shared Public & Extern & geteilt & Cloudanbieter oder Markt & minimale Einschränkungen & Nutzungsabhängig \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} Dedicated Public & Extern & (Teilweise) dediziert & Cloudanbieter oder Markt & Vertragsabhängig & Nutzungsabhängig \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} Self Hosted Private & Intern & Dediziert & Voll & Investitionsabhängig & Cloud-Aufbau, ROI durch Serviceangebot \\ 
+		\hline
+		\rule[-2ex]{0pt}{5.5ex} Hosted Private & Extern & Dediziert & Voll & Vertrags- oder Investitionsabhängig & Vertragsabhängig, möglicherweise mit Auswirkung auf Barvermögen \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Private Appliance & Intern & Dediziert & Cloudanbieter & Angebotsabhängig & Vertragsabhängig, möglicherweise mit Auswirkung auf Barvermögen \\ 
+		\hline 
+	\end{tabular}
+\end{figure*}
 
 \subsection{Public Cloud}
 Anbieter von IT Ressourcen als SaaS, PaaS und speziell als IaaS müssen die Rechenleistung in Form von Rechenzentren bereitstellen, um die Verfügbarkeit dieser Ressourcen über weite Strecken zu gewährleisten, erfolgt dies in der Regel über Orts- und Ländergrenzen hinweg. Im Fall einer public Cloud befindet sich die zugrundeliegende Schicht im Eigentum des jeweiligen Cloud Anbieters.
@@ -93,10 +139,10 @@ Neben der Unterscheidung in Private- und Public Cloud ergibt sich auch ein Raum 
 
 Besonders bietet sich diese Form an, wenn datenschutzkritische Prozesse gesondert in einer Private Cloud und datenschutzunkritische Prozesse in einer Public Cloud bearbeitet werden können, da so die Einspar- sowie Skalierungsmöglichkeiten der Public Cloud genutzt werden und gleichzeitig die Datenexposition verhindert werden kann. Die Unterteilung von Geschäftsprozessen in diese Kategorien stellt dabei jedoch keine geringe Hürde dar.
 
-\section{Private vs. Publicly as a Service}
+\section{Privatly vs. Publicly as a Service}
 \label{sec_privacy_service_models}
 
-\IEEEPARstart{A}{ll} my services are belong to you!
+\IEEEPARstart{W}{erden} die Unterscheidungen nach Servicemodell und Bereitstellungsart gemeinsam betrachtet erschließen sich weitere Vor- und Nachteile der jeweiligen Betriebsform die im folgenden exemplarisch erläutert werden. Hierbei wird auf eine gesonderte Betrachtung des Datenschutzaspekts verzichtet und stattdessen der Fokus allein auf die technisch-organisatorischen Besonderheiten gelegt. 
 
 \subsection{Whatever as a Service auf meinem PC in der VM bei Goomazoft}
 ...
