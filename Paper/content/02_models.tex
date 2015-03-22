@@ -1,7 +1,7 @@
-\section{Service Models}
+\section{Service-Modelle}
 \label{sec_service_models}
 
-\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren. \cite{rackSpace}
+\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service-Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software-Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren. \cite{rackSpace}
 
 \begin{figure}
 	\centering
@@ -14,7 +14,7 @@ Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sic
 
 Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde. Als Beispiel einer Infrastruktur die auch gleichzeitig als Plattform fungiert wäre z.B. eine Rolltreppe als Analogie zu betrachten.
 
-Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen, Tabelle \ref{serviceModelsTable} bildet dabei eine Übersicht über die verschiedenen Modelle.
+Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service-Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen, Abbildung \ref{serviceModelsTable} bildet dabei eine Übersicht über die verschiedenen Modelle.
 
 \begin{figure*}
 	\centering
@@ -29,7 +29,7 @@ Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Mod
 		\rule[-2ex]{0pt}{5.5ex} SaaS & Besitzverhältnis der Software & Service Level Agreements; Oberfläche meist durch Browser dargestellt; greift auf weitere Cloud Komponenten zu; Kommunikation durch APIs; Zustandslos & Entwicklungskosten können umgangen werden; ROI Risiken werden verschoben; iterative Updates; optimierte Aktualisierung & Zentralisierung der Daten erfordert neue Maßnahmen für die Datensicherheit & - \\ 
 		\hline
 	\end{tabular}
-	\label{serivceModelsTable}
+	\label{serviceModelsTable}
 	\caption{Übersicht der Service Arten}
 \end{figure*}
  
@@ -65,21 +65,26 @@ Allerdings gilt es bei PaaS den Einsatzzweck auf die Nutzbarkeit mit einem PaaS 
 \subsection{Software as a Service}
 Software as a Service (SaaS) bildet die oberste Schicht in der schichtweisen Betrachtung des Cloud Computing und wird so auch häufig durch die Nutzung einer der beiden darunter liegenden Schichten realisiert. Im Vergleich zu den vorherigen Modellen ist die so angebotene Software von den darunter befindlichen Strukturen abstrahiert und für Endnutzer zugänglich. Software die als SaaS angeboten wird, kann vom Nutzer über ein Netzwerk genutzt werden und verlangt so keine Installation. Diese Auslieferungsmethode bringt zudem den Vorteil, dass Nutzer sich nicht mehr um die Wartung der Software kümmern müssen und bei der Entwicklung von einer deutlich geringeren Versionsfragmentierung ausgegangen werden kann. Wie auch bei den vorangegangenen Schichten wird die SaaS Schicht durch APIs erweiterbar gehalten und nutzt für gewöhnlich fremde APIs um realisiert zu werden.
 
-Vor allem durch den hohen Grad an Standardisierung der Software bietet sich die Nutzung von SaaS für grundlegende Softwaresysteme an, die nicht zum Kernbereich des jeweiligen Unternehmens zählen, email- sowie CRM-Systeme stellen hier ein gängiges Beispiel für den SaaS Einsatz dar. Derartige Systeme sind typischerweise für den laufenden Betrieb eines Unternehmens wichtig, bieten jedoch selten einen großen Wettbewerbsvorteil bei eigenen Anpassungen. Durch die Vereinbarung von Service Level Agreements ist es vor allem möglich eine gute Erreichbarkeit der Lösung zu gewährleisten - üblicherweise liegt die zugesicherte Erreichbarkeit der Systeme bei 99\% und höher. Auch hier werden derartige Dienste entsprechend der Nutzungsdauer bezahlt.
+Vor allem durch den hohen Grad an Standardisierung der Software bietet sich die Nutzung von SaaS für grundlegende Softwaresysteme an, die nicht zum Kernbereich des jeweiligen Unternehmens zählen, Email- sowie CRM-Systeme stellen hier ein gängiges Beispiel für den SaaS Einsatz dar. Derartige Systeme sind typischerweise für den laufenden Betrieb eines Unternehmens wichtig, bieten jedoch selten einen großen Wettbewerbsvorteil bei eigenen Anpassungen. Durch die Vereinbarung von Service Level Agreements ist es vor allem möglich eine gute Erreichbarkeit der Lösung zu gewährleisten - üblicherweise liegt die zugesicherte Erreichbarkeit der Systeme bei 99\% und höher. Auch hier werden derartige Dienste entsprechend der Nutzungsdauer bezahlt.
 
-Die leichten Skalierungsmöglichkeiten der einer SaaS Lösung zugrunde liegenden Cloud Infrastruktur erweist sich als weiterer Indikator auf den Einsatz einer solchen Lösung zu setzen. Ist es zu erwarten, dass die Software nur über kurze Zeiträume unter hoher Last stehen wird, wie z.B. bei Verkaufssystemen vor Weihnachten oder zu Beginn eines neuen Jahres. Auch wenn die Nutzung der Software nur für einen begrenzten Zeitraum benötigt wird, bietet sich die Verwendung von SaaS an. Ebenso kann das über ein Netzwerk erfolgende Angebot der Software ausgenutzt werden, da Anwendungen mit einem hohen Grad an Interaktion mit anderen Systemen leichter mit diesen sowie weiteren Diensten kommunizieren können. Mit Blick auf die zunehmende Verbreitung der mobilen Internet Nutzung sowie der verbreiteten Unterstützung verschiedener Anzeigegrößen im SaaS Umfeld, ist der Einsatz einer SaaS Lösung auch von Interesse wenn ein möglichst nahtloser Übergang zwischen verschiedenen Gerätetypen gewährleistet werden soll, da die SaaS-Anwendung die selbe bleibt und so z.B. keine Brüche im Datenbestand auftreten. Nicht zuletzt ist eine SaaS Lösung zu empfehlen wenn die Versionsfragmentierung minimal gehalten werden soll.
+Die leichten Skalierungsmöglichkeiten der einer SaaS Lösung zugrunde liegenden Cloud Infrastruktur erweist sich als weiterer Indikator auf den Einsatz einer solchen Lösung zu setzen. Ist es zu erwarten, dass die Software nur über kurze Zeiträume unter hoher Last stehen wird, wie z.B. bei Verkaufssystemen vor Weihnachten oder zu Beginn eines neuen Jahres. Auch wenn die Nutzung der Software nur für einen begrenzten Zeitraum benötigt wird, bietet sich die Verwendung von SaaS an. Ebenso kann das über ein Netzwerk erfolgende Angebot der Software ausgenutzt werden, da Anwendungen mit einem hohen Grad an Interaktion mit anderen Systemen leichter mit diesen sowie weiteren Diensten kommunizieren können. 
+
+Mit Blick auf die zunehmende Verbreitung der mobilen Internet Nutzung sowie der verbreiteten Unterstützung verschiedener Anzeigegrößen im SaaS Umfeld, ist der Einsatz einer SaaS Lösung auch von Interesse wenn ein möglichst nahtloser Übergang zwischen verschiedenen Gerätetypen gewährleistet werden soll, da die SaaS-Anwendung die selbe bleibt und so z.B. keine Brüche im Datenbestand auftreten. Nicht zuletzt ist eine SaaS Lösung zu empfehlen wenn die Versionsfragmentierung minimal gehalten werden soll.
 
 Im Gegenzug bietet sich eine SaaS Lösung nicht an wenn die benötigte Funktion bereits durch eine existierende on-premise abgedeckt wird, d.h. bestehende Systeme durch eine SaaS Einführung nicht weiter genutzt werden würden. Ebenso stellt, wie auch bei der IaaS, die Gesetzgebung oder die Firmengrundsätze eine Entscheidungsgrundlage dar, ist vor allem bei einer öffentlichen SaaS Lösung nicht auszuschließen, dass Daten das Land oder das Firmennetzwerk verlassen. Und ebenfalls wie bei der IaaS zutreffend ist auch bei SaaS die nötige Verarbeitungsgeschwindigkeit entscheidend, die sofortige Verarbeitung anfallender Echtzeitdaten kann bei SaaS nicht immer gewährleistet sein und so eine on-premise Lösung erstrebenswerter machen. \cite{technet} \cite{rackSpace} \cite{ibm2011}
 
 \subsection{Everything as a Service}
-Neben den hier aufgeführten Modellen wird das Servicemodell auch in anderen Formen in Verbindung zum Cloud Computing gebracht, so gibt es die Möglichkeit Business Process as a Service zu nutzen um z.B. weitere Teile des Tagesgeschäfts automatisieren zu können, zudem werden auch die eventuell nötigen Schritte zur Skalierung oder zum Start einer Cloudlösung angeboten und als Cloudsetup as a Service vertrieben. Der Computing Aspekt ist dabei weit weniger im Vordergrund als bei den vorangegangenen Modellen. Überdies gibt es Spezialisierungen der Modelle, sodass der Betrieb angepasster Datenbanken als Database as a Service betrieben wird oder Plattformen die mit minimalem Aufwand zur vollständigen Software as a Service aufgebaut werden können, wofür Wordpress as a Service beispielhaft ist.
+Neben den hier aufgeführten Modellen wird das Servicemodell auch in anderen Formen in Verbindung zum Cloud Computing gebracht, so gibt es die Möglichkeit Business Process as a Service zu nutzen um zum Beispiel weitere Teile des Tagesgeschäfts automatisieren zu können, zudem werden auch die eventuell nötigen Schritte zur Skalierung oder zum Start einer Cloud-Lösung angeboten und als Cloudsetup as a Service vertrieben. Der Computing Aspekt ist dabei weit weniger im Vordergrund als bei den vorangegangenen Modellen. 
 
+Überdies gibt es Spezialisierungen der Modelle, sodass der Betrieb angepasster Datenbanken als Database as a Service betrieben wird oder Plattformen die mit minimalem Aufwand zur vollständigen Software as a Service aufgebaut werden können, wofür Wordpress as a Service beispielhaft ist.
+
+\newpage
 \section{Private vs. Public}
 \label{sec_privacy_models}
 
-\IEEEPARstart{U}{nabhängig} von der Serviceform erfolgt die Einteilung zudem nach der Art der Bereitstellung eines Clouddienstes. Dabei richtet sich die Unterscheidung nach dem Eigentumsverhältnis der zugrundeliegenden Systeme und dem damit verbundenen Grad an Anpassbarkeit. Die Anpassbarkeit bezieht sich dabei sowohl auf die Architektur als auch auf die des jeweiligen Dienstes. 
+\IEEEPARstart{U}{nabhängig} von der Serviceform erfolgt die Einteilung zudem nach der Art der Bereitstellung eines Cloud-Dienstes. Dabei richtet sich die Unterscheidung nach dem Eigentumsverhältnis der zugrundeliegenden Systeme und dem damit verbundenen Grad an Anpassbarkeit. Die Anpassbarkeit bezieht sich dabei sowohl auf die Architektur als auch auf die des jeweiligen Dienstes. 
 
-Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle - dargestellt in Tabelle \ref{deploymentTypesTable}. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
+Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle - dargestellt in Abbildung \ref{deploymentTypesTable}. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
 
 \begin{figure*}
 	\begin{tabular}{|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{1.6cm}|>{\RaggedRight}p{2.2cm}|>{\RaggedRight}p{2.5cm}|>{\RaggedRight}p{2.7cm}|>{\RaggedRight}p{3cm}|}
@@ -102,14 +107,14 @@ Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der ein
 \end{figure*}
 
 \subsection{Public Cloud}
-Anbieter von IT Ressourcen als SaaS, PaaS und speziell als IaaS müssen die Rechenleistung in Form von Rechenzentren bereitstellen, um die Verfügbarkeit dieser Ressourcen über weite Strecken zu gewährleisten, erfolgt dies in der Regel über Orts- und Ländergrenzen hinweg. Im Fall einer public Cloud befindet sich die zugrundeliegende Schicht im Eigentum des jeweiligen Cloud Anbieters.
+Anbieter von IT Ressourcen als SaaS, PaaS und speziell als IaaS müssen die Rechenleistung in Form von Rechenzentren bereitstellen, um die Verfügbarkeit dieser Ressourcen über weite Strecken zu gewährleisten, erfolgt dies in der Regel über Orts- und Ländergrenzen hinweg. Im Fall einer Public Cloud befindet sich die zugrundeliegende Schicht im Eigentum des jeweiligen Cloud-Anbieters.
 
 Diese Ressourcen werden mehreren Kunden zur Verfügung gestellt, was zu einer Kostenreduktion für den einzelnen Nutzer führt und die vorhandenen Kapazitäten besser ausnutzt - z.b. indem die nicht benötigte Leistung eines Kunden sinnvoll mit dem Abfangen eines hohen Leistungsbedarfs eines anderen Kunden kombiniert werden kann.
 Im Gegenzug bedeutet diese Ressourcenteilung jedoch z.B. auch die gemeinsame Nutzung von Speicher bzw. die geringere Kontrolle über die eingesetzte Software und die so verarbeiteten Daten.
 
-Die vorgestellten Service Modelle (IaaS, PaaS und SaaS) sind alle sowohl als private als auch als public Lösung zu finden.
+Die vorgestellten Service-Modelle (IaaS, PaaS und SaaS) sind alle sowohl als Private als auch als Public Lösung zu finden.
 
-Auch das Angebot der Public Cloud bietet weitere Unterscheidungsmöglichkeiten in Bezug auf die Hosting Form.
+Auch das Angebot der Public Cloud bietet weitere Unterscheidungsmöglichkeiten in Bezug auf die Betriebsform.
 
 \subsubsection{Shared Public Cloud}
 Wird der Service auf einer mit mehreren Benutzern geteilten Schicht betrieben, deren Architektur, Absicherung und Verwaltung durch den Anbieter erfolgt, wird von einer Shared Public Cloud gesprochen. Auch die Anpassbarkeit wird hier durch den Anbieter vorgegeben. Durch diese Bedingungen ist es möglich besonders günstige Kosten für den Betrieb zu veranschlagen und den Umfang der Serviceleistung nach Bedarf zu skalieren. 
@@ -118,9 +123,9 @@ Wird der Service auf einer mit mehreren Benutzern geteilten Schicht betrieben, d
 Das direkte Gegenstück zur Shared Public Cloud bildet die Dedicated Public Cloud, bei der ein Teil der Ressourcen der Shared Public Cloud einem Kunden dediziert zur Verfügung gestellt werden. Durch den Ausschluss weiterer Nutzer der selben Infrastruktur bietet sich häufig eine bessere Leistungsfähigkeit als bei der Shared Public Cloud, ebenso können meist mehr Sicherheitsmaßnahmen getroffen werden und anderweitige Anpassungen des Dienstes vorgenommen werden. Auch wenn es sich um dedizierte Systeme handelt, erfolgt das Hosting der Dienste auf Systemen im Besitz des Anbieters.
 
 \subsection{Private Cloud}
-Die IT Ressourcen werden bei einer Private Cloud exklusiv für einen Kunden bereitgestellt. Damit können Anforderungen an Sicherheit, Privatsphäre im hohen Maß erfüllt werden und das Vertrauen in die Cloud Lösung erhöht werden. Dazu bietet eine derartige Lösung die Möglichkeit innerhalb des zur Verfügung stehenden Vorrats an Ressourcen nach Bedarf zu skalieren und diese Ressourcen so bestmöglich zu nutzen.
+Die IT Ressourcen werden bei einer Private Cloud exklusiv für einen Kunden bereitgestellt. Damit können Anforderungen an Sicherheit, Privatsphäre im hohen Maß erfüllt werden und das Vertrauen in die Cloud-Lösung erhöht werden. Dazu bietet eine derartige Lösung die Möglichkeit innerhalb des zur Verfügung stehenden Vorrats an Ressourcen nach Bedarf zu skalieren und diese Ressourcen so bestmöglich zu nutzen.
 
-Die Verwendung einer privaten Cloud Lösung bietet sich vor allem an, wenn das Gesetzes- oder Unternehmensumfeld strenge Vorgaben an den Betrieb der IT stellt oder das Vertrauen in einen passenden Cloudanbieter nicht ausreicht um die nötige Lösung in dessen Public Cloud zu hosten. 
+Die Verwendung einer privaten Cloud-Lösung bietet sich vor allem an, wenn das Gesetzes- oder Unternehmensumfeld strenge Vorgaben an den Betrieb der IT stellt oder das Vertrauen in einen passenden Cloud-Anbieter nicht ausreicht um die nötige Lösung in dessen Public Cloud zu hosten. 
 
 Wie auch bei der Public Cloud kann die Private Cloud anhand der Hosting Form unterschieden werden.
 
@@ -128,12 +133,12 @@ Wie auch bei der Public Cloud kann die Private Cloud anhand der Hosting Form unt
 Die Self-Hosted Private Cloud stellt auf Basis der bestehenden Systeme und Services eine im Rahmen dieser skalierbare Cloud Umgebung. Dadurch behält man die volle Kontrolle über die Systeme, kann die Architektur nach Belieben anpassen und die Auslastung der Systeme maximieren.
 
 \subsubsection{Hosted Private Cloud}
-Im Vergleich zur Dedicated Public Cloud/ Virtual Private Cloud, ist die Hosted Private Cloud zwar ebenfalls im Data-Center eines Cloudanbieters angesiedelt und wird mittels der Dienste dieses Anbieters betrieben, allerdings können die dazu nötigen Systeme vom Kunden angepasst werden und werden durch den Kunden dediziert gemietet. Durch diese Konstellation lässt sich der Vorteil einer in einem Data-Center befindlichen Lösung mit der Kontrolle wie bei einer Self-Hosted Private Cloud kombinieren.
+Im Vergleich zur Dedicated Public Cloud beziehungsweise Virtual Private Cloud, ist die Hosted Private Cloud zwar ebenfalls im Data Center eines Cloud-Anbieters angesiedelt und wird mittels der Dienste dieses Anbieters betrieben, allerdings können die dazu nötigen Systeme vom Kunden angepasst werden und werden durch den Kunden dediziert gemietet. Durch diese Konstellation lässt sich der Vorteil einer in einem Data-Center befindlichen Lösung mit der Kontrolle wie bei einer Self-Hosted Private Cloud kombinieren.
 
 \subsubsection{Private Cloud Appliance}
-Bei einer Private Cloud Appliance wird eine von einem Cloudanbieter entworfene und angepasste Cloudumgebung beim Kunden installiert und durch diesen oder den Cloudanbieter selbst gewartet. Dadurch ist es möglich die Interoperabilität der Dienste des Cloudanbieters nutzen zu können ohne die Sicherheit oder die Kontrolle über die Daten einzuschränken, allerdings ist die Skalierung meist nur im Rahmen der vorhandenen Umgebung möglich.
+Bei einer Private Cloud Appliance wird eine von einem Cloud-Anbieter entworfene und angepasste Cloud-Umgebung beim Kunden installiert und durch diesen oder den Cloud-Anbieter selbst gewartet. Dadurch ist es möglich die Interoperabilität der Dienste des Cloud-Anbieters nutzen zu können ohne die Sicherheit oder die Kontrolle über die Daten einzuschränken, allerdings ist die Skalierung meist nur im Rahmen der vorhandenen Umgebung möglich.
 
 \subsection{Hybrid Cloud}
-Neben der Unterscheidung in Private- und Public Cloud ergibt sich auch ein Raum für Mischformen, bei denen verschiedene Cloud Infrastrukturformen miteinander kombiniert werden. Die Komposition erfolgt dabei so, dass die Teilbestandteile eigenständig funktionieren, bei Bedarf jedoch zwischen den Bestandteilen ausgetauscht werden kann um z.B. Lastspitzen abzufangen oder um Teilberechnungen auf einem angepassten Dienst durchzuführen. Als Hybrid Cloud werden auch Systeme bezeichnet, die verschiedene Dienste der gleichen Infrastrukturform komponieren wie z.B. mehrere Public Cloud Dienste.
+Neben der Unterscheidung in Private und Public Cloud ergibt sich auch ein Raum für Mischformen, bei denen verschiedene Cloud-Infrastrukturformen miteinander kombiniert werden. Die Komposition erfolgt dabei so, dass die Teilbestandteile eigenständig funktionieren, bei Bedarf jedoch zwischen den Bestandteilen ausgetauscht werden kann um z.B. Lastspitzen abzufangen oder um Teilberechnungen auf einem angepassten Dienst durchzuführen. Als Hybrid Cloud werden auch Systeme bezeichnet, die verschiedene Dienste der gleichen Infrastrukturform komponieren wie z.B. mehrere Public Cloud Dienste.
 
 Besonders bietet sich diese Form an, wenn datenschutzkritische Prozesse gesondert in einer Private Cloud und datenschutzunkritische Prozesse in einer Public Cloud bearbeitet werden können, da so die Einspar- sowie Skalierungsmöglichkeiten der Public Cloud genutzt werden und gleichzeitig die Datenexposition verhindert werden kann. Die Unterteilung von Geschäftsprozessen in diese Kategorien stellt dabei jedoch keine geringe Hürde dar. \cite{technet}
