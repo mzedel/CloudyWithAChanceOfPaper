@@ -1,7 +1,7 @@
 \section{Service Models}
 \label{sec_service_models}
 
-\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
+\IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren. \cite{rackSpace}
 
 \begin{figure}
 	\centering
@@ -14,7 +14,7 @@ Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sic
 
 Dabei gilt es zu beachten, dass die Grenzen zwischen den einzelnen Schichten nicht immer klar gezogen werden können, analog könnte die S-Bahn möglicherweise eine speziell angepasste Antriebstechnik benötigen und so direkt an die Berliner Infrastruktur gekoppelt sein, oder nach der Umstellung auf Draisinen eine der Infrastruktur nähere Betriebsweise eingeführt haben - wodurch der Plattform Charakter in den Hintergrund gerückt werden würde. Als Beispiel einer Infrastruktur die auch gleichzeitig als Plattform fungiert wäre z.B. eine Rolltreppe als Analogie zu betrachten.
 
-Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen.
+Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Modelle vorgestellt und auf ebenfalls entstandene Mischformen eingegangen, Tabelle \ref{serviceModelsTable} bildet dabei eine Übersicht über die verschiedenen Modelle.
 
 \begin{figure*}
 	\centering
@@ -28,7 +28,6 @@ Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Mod
 		\hline
 		\rule[-2ex]{0pt}{5.5ex} SaaS & Besitzverhältnis der Software & Service Level Agreements; Oberfläche meist durch Browser dargestellt; greift auf weitere Cloud Komponenten zu; Kommunikation durch APIs; Zustandslos & Entwicklungskosten können umgangen werden; ROI Risiken werden verschoben; iterative Updates; optimierte Aktualisierung & Zentralisierung der Daten erfordert neue Maßnahmen für die Datensicherheit & - \\ 
 		\hline
-
 	\end{tabular}
 	\label{serivceModelsTable}
 	\caption{Übersicht der Service Arten}
@@ -40,7 +39,7 @@ Infrastructure as a Service (IaaS) bezeichnet üblicherweise die Bereitstellung 
 
 IaaS stellt für gewöhnlich die Ressourcen ohne Einschränkungen für die Anzahl der Nutzer als Dienst bereit und erlaubt es die bezogene Leistung dynamisch zu skalieren. Mit der Skalierung des genutzten Services wird üblicherweise auch die Berechnungsgrundlage geändert - vergleichbar mit der Berechnung von Strom- oder Gaskosten.
 
-Indem IaaS Anbieter mehr und mehr Konfigurationsunterstützung in Form von Tools und automatisierten Vorgängen bereitstellen, wird die Grenze zur Platform as a Service (PaaS) zunehmend verschoben. Zudem erlauben offene Standards und universell einsetzbare Tools die flexible Kombination von lokal gehosteten Systemen mit denen die durch einen öffentlichen IaaS Anbieter bezogen werden, was als Hybrid Cloud bezeichnet werden kann [Verweis auf ].
+Indem IaaS Anbieter mehr und mehr Konfigurationsunterstützung in Form von Tools und automatisierten Vorgängen bereitstellen, wird die Grenze zur Platform as a Service (PaaS) zunehmend verschoben. Zudem erlauben offene Standards und universell einsetzbare Tools die flexible Kombination von lokal gehosteten Systemen mit denen die durch einen öffentlichen IaaS Anbieter bezogen werden, was als Hybrid Cloud bezeichnet werden kann. \cite{technet}
 
 Aufgrund der weitgehenden Freiheit eines Nutzers bei der Handhabung der genutzten Ressource steht es meist frei Server im Rahmen der Unterstützten Betriebssysteme nach Belieben anzupassen. Im Vergleich zu den noch folgenden Service Modellen Platform- und Software as a Service bietet IaaS damit die höchste Flexibilität und erlaubt z.B. den Einsatz von höchst spezialisierter Software.
 
@@ -48,7 +47,7 @@ Durch die Bereitstellung der bloßen Infrastruktur-Ressourcen beschränkt sich b
 
 Sinnvoll erscheint die Nutzung von IaaS daher vor allem wenn die dynamische Skalierung der Ressourcen nötig ist, d.h. wenn kurzzeitig eine verstärkte Nachfrage auftritt oder ein plötzlich auftretendes Wachstum der Nutzerbasis eine solche Skalierung verlangt. Zudem ist IaaS für Unternehmen interessant deren Kapitalressourcen nicht ausreichen um die nötige Menge an Hardware zu beschaffen um die für die Geschäftsidee nötigen Systeme zu betreiben. Überdies kann IaaS häufig auch bei Testprojekten oder nur ausgewählten Geschäftsgebieten machen, sodass der Betrieb eines Unternehmens allein auf Basis von IaaS nicht nötig ist.
 
-Von IaaS als Lösung ist jedoch abzuraten wenn die zuvor erwähnten Nachteile überwiegen, d.h. eine sehr große Datensicherheit nötig ist oder die Gesetzeslage es verbietet Daten außerhalb der eigenen Unternehmensgrenzen zu lagern. Auch wenn es sich vor allem um die hochperformante Verarbeitung von großen Datenmengen handelt, die nicht direkt für die auf dem IaaS laufende Anwendung zugänglich ist, ist der zeitliche Mehraufwand beim Datentransfer zu bedenken und eine dedizierte Lösung eventuell besser geeignet. 
+Von IaaS als Lösung ist jedoch abzuraten wenn die zuvor erwähnten Nachteile überwiegen, d.h. eine sehr große Datensicherheit nötig ist oder die Gesetzeslage es verbietet Daten außerhalb der eigenen Unternehmensgrenzen zu lagern. Auch wenn es sich vor allem um die hochperformante Verarbeitung von großen Datenmengen handelt, die nicht direkt für die auf dem IaaS laufende Anwendung zugänglich ist, ist der zeitliche Mehraufwand beim Datentransfer zu bedenken und eine dedizierte Lösung eventuell besser geeignet. \cite{technet} \cite{rackSpace} \cite{ibm2011}
 
 \subsection{Platform as a Service}
 Platform as a Service (PaaS) erweitert die Möglichkeiten des IaaS um Entwicklungsspezifische Punkte, sodass ein PaaS Anbieter für gewöhnlich vorkonfigurierte Entwicklungs- und Laufzeitumgebungen anbietet, die nach Bedarf in der Leistung und Größe skaliert werden können. Wie bei IaaS ist es nicht nötig die Hardware auf der die Software laufen soll zu kaufen, diese wird als Teil des Services gestellt. PaaS Anbieter müssen dank der Möglichkeiten von IaaS nicht einmal selber Infrastruktur besitzen, sondern können sich auf die Optimierung der für ihr PaaS Geschäft nötigen Software konzentrieren. 
@@ -61,7 +60,7 @@ Meistens unterscheiden sich die verschiedenen Plattformen im Ausmaß der Vorarbe
 
 Aufgrund des Fokus' auf die Entwicklungsunterstützung bietet PaaS auch hier den größten Vorteil, da komplexe IT Anwendungen häufig von komplexen Entwicklungsstrukturen begleitet werden. Damit einher gehend ist die Nutzung von PaaS ebenfalls für Entwicklungen mit automatisierten Tests und häufigen Iterationen zu empfehlen, da der hohe Automatisierungsgrad eine ständige Neuinstallation stark vereinfacht und somit die dabei auftretenden Probleme von Beginn an behandelt werden können.
 
-Allerdings gilt es bei PaaS den Einsatzzweck auf die Nutzbarkeit mit einem PaaS zu überprüfen sowie bei der vom PaaS verwandten Technologie darauf zu achten ob man einem Vendor lock-in entgehen könnte. Wie auch bei IaaS ist auch hier die Performancebetrachtung wichtig, da die standardisierten Umgebungen wenig Spielraum zulassen, spezielle Betriebssystemfunktionen oder Fremdsoftware zu nutzen bzw. anzupassen, im Gegensatz zu IaaS gilt diese Limitierung auch beim Betrieb einer eigenen PaaS Umgebung.
+Allerdings gilt es bei PaaS den Einsatzzweck auf die Nutzbarkeit mit einem PaaS zu überprüfen sowie bei der vom PaaS verwandten Technologie darauf zu achten ob man einem Vendor lock-in entgehen könnte. Wie auch bei IaaS ist auch hier die Performancebetrachtung wichtig, da die standardisierten Umgebungen wenig Spielraum zulassen, spezielle Betriebssystemfunktionen oder Fremdsoftware zu nutzen bzw. anzupassen, im Gegensatz zu IaaS gilt diese Limitierung auch beim Betrieb einer eigenen PaaS Umgebung. \cite{technet} \cite{rackSpace} \cite{ibm2011}
 
 \subsection{Software as a Service}
 Software as a Service (SaaS) bildet die oberste Schicht in der schichtweisen Betrachtung des Cloud Computing und wird so auch häufig durch die Nutzung einer der beiden darunter liegenden Schichten realisiert. Im Vergleich zu den vorherigen Modellen ist die so angebotene Software von den darunter befindlichen Strukturen abstrahiert und für Endnutzer zugänglich. Software die als SaaS angeboten wird, kann vom Nutzer über ein Netzwerk genutzt werden und verlangt so keine Installation. Diese Auslieferungsmethode bringt zudem den Vorteil, dass Nutzer sich nicht mehr um die Wartung der Software kümmern müssen und bei der Entwicklung von einer deutlich geringeren Versionsfragmentierung ausgegangen werden kann. Wie auch bei den vorangegangenen Schichten wird die SaaS Schicht durch APIs erweiterbar gehalten und nutzt für gewöhnlich fremde APIs um realisiert zu werden.
@@ -70,18 +69,17 @@ Vor allem durch den hohen Grad an Standardisierung der Software bietet sich die 
 
 Die leichten Skalierungsmöglichkeiten der einer SaaS Lösung zugrunde liegenden Cloud Infrastruktur erweist sich als weiterer Indikator auf den Einsatz einer solchen Lösung zu setzen. Ist es zu erwarten, dass die Software nur über kurze Zeiträume unter hoher Last stehen wird, wie z.B. bei Verkaufssystemen vor Weihnachten oder zu Beginn eines neuen Jahres. Auch wenn die Nutzung der Software nur für einen begrenzten Zeitraum benötigt wird, bietet sich die Verwendung von SaaS an. Ebenso kann das über ein Netzwerk erfolgende Angebot der Software ausgenutzt werden, da Anwendungen mit einem hohen Grad an Interaktion mit anderen Systemen leichter mit diesen sowie weiteren Diensten kommunizieren können. Mit Blick auf die zunehmende Verbreitung der mobilen Internet Nutzung sowie der verbreiteten Unterstützung verschiedener Anzeigegrößen im SaaS Umfeld, ist der Einsatz einer SaaS Lösung auch von Interesse wenn ein möglichst nahtloser Übergang zwischen verschiedenen Gerätetypen gewährleistet werden soll, da die SaaS-Anwendung die selbe bleibt und so z.B. keine Brüche im Datenbestand auftreten. Nicht zuletzt ist eine SaaS Lösung zu empfehlen wenn die Versionsfragmentierung minimal gehalten werden soll.
 
-Im Gegenzug bietet sich eine SaaS Lösung nicht an wenn die benötigte Funktion bereits durch eine existierende on-premise abgedeckt wird, d.h. bestehende Systeme durch eine SaaS Einführung nicht weiter genutzt werden würden. Ebenso stellt, wie auch bei der IaaS, die Gesetzgebung oder die Firmengrundsätze eine Entscheidungsgrundlage dar, ist vor allem bei einer öffentlichen SaaS Lösung nicht auszuschließen, dass Daten das Land oder das Firmennetzwerk verlassen. Und ebenfalls wie bei der IaaS zutreffend ist auch bei SaaS die nötige Verarbeitungsgeschwindigkeit entscheidend, die sofortige Verarbeitung anfallender Echtzeitdaten kann bei SaaS nicht immer gewährleistet sein und so eine on-premise Lösung erstrebenswerter machen.
+Im Gegenzug bietet sich eine SaaS Lösung nicht an wenn die benötigte Funktion bereits durch eine existierende on-premise abgedeckt wird, d.h. bestehende Systeme durch eine SaaS Einführung nicht weiter genutzt werden würden. Ebenso stellt, wie auch bei der IaaS, die Gesetzgebung oder die Firmengrundsätze eine Entscheidungsgrundlage dar, ist vor allem bei einer öffentlichen SaaS Lösung nicht auszuschließen, dass Daten das Land oder das Firmennetzwerk verlassen. Und ebenfalls wie bei der IaaS zutreffend ist auch bei SaaS die nötige Verarbeitungsgeschwindigkeit entscheidend, die sofortige Verarbeitung anfallender Echtzeitdaten kann bei SaaS nicht immer gewährleistet sein und so eine on-premise Lösung erstrebenswerter machen. \cite{technet} \cite{rackSpace} \cite{ibm2011}
 
 \subsection{Everything as a Service}
 Neben den hier aufgeführten Modellen wird das Servicemodell auch in anderen Formen in Verbindung zum Cloud Computing gebracht, so gibt es die Möglichkeit Business Process as a Service zu nutzen um z.B. weitere Teile des Tagesgeschäfts automatisieren zu können, zudem werden auch die eventuell nötigen Schritte zur Skalierung oder zum Start einer Cloudlösung angeboten und als Cloudsetup as a Service vertrieben. Der Computing Aspekt ist dabei weit weniger im Vordergrund als bei den vorangegangenen Modellen. Überdies gibt es Spezialisierungen der Modelle, sodass der Betrieb angepasster Datenbanken als Database as a Service betrieben wird oder Plattformen die mit minimalem Aufwand zur vollständigen Software as a Service aufgebaut werden können, wofür Wordpress as a Service beispielhaft ist.
-
 
 \section{Private vs. Public}
 \label{sec_privacy_models}
 
 \IEEEPARstart{U}{nabhängig} von der Serviceform erfolgt die Einteilung zudem nach der Art der Bereitstellung eines Clouddienstes. Dabei richtet sich die Unterscheidung nach dem Eigentumsverhältnis der zugrundeliegenden Systeme und dem damit verbundenen Grad an Anpassbarkeit. Die Anpassbarkeit bezieht sich dabei sowohl auf die Architektur als auch auf die des jeweiligen Dienstes. 
 
-Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
+Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle - dargestellt in Tabelle \ref{deploymentTypesTable}. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
 
 \begin{figure*}
 	\begin{tabular}{|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{1.6cm}|>{\RaggedRight}p{2.2cm}|>{\RaggedRight}p{2.5cm}|>{\RaggedRight}p{2.7cm}|>{\RaggedRight}p{3cm}|}
@@ -138,9 +136,4 @@ Bei einer Private Cloud Appliance wird eine von einem Cloudanbieter entworfene u
 \subsection{Hybrid Cloud}
 Neben der Unterscheidung in Private- und Public Cloud ergibt sich auch ein Raum für Mischformen, bei denen verschiedene Cloud Infrastrukturformen miteinander kombiniert werden. Die Komposition erfolgt dabei so, dass die Teilbestandteile eigenständig funktionieren, bei Bedarf jedoch zwischen den Bestandteilen ausgetauscht werden kann um z.B. Lastspitzen abzufangen oder um Teilberechnungen auf einem angepassten Dienst durchzuführen. Als Hybrid Cloud werden auch Systeme bezeichnet, die verschiedene Dienste der gleichen Infrastrukturform komponieren wie z.B. mehrere Public Cloud Dienste.
 
-Besonders bietet sich diese Form an, wenn datenschutzkritische Prozesse gesondert in einer Private Cloud und datenschutzunkritische Prozesse in einer Public Cloud bearbeitet werden können, da so die Einspar- sowie Skalierungsmöglichkeiten der Public Cloud genutzt werden und gleichzeitig die Datenexposition verhindert werden kann. Die Unterteilung von Geschäftsprozessen in diese Kategorien stellt dabei jedoch keine geringe Hürde dar.
-
-\section{Privatly vs. Publicly as a Service}
-\label{sec_privacy_service_models}
-
-\IEEEPARstart{W}{erden} die Unterscheidungen nach Servicemodell und Bereitstellungsart gemeinsam betrachtet erschließen sich weitere Vor- und Nachteile der jeweiligen Betriebsform die im folgenden exemplarisch erläutert werden. Hierbei wird auf eine gesonderte Betrachtung des Datenschutzaspekts verzichtet und stattdessen der Fokus allein auf die technisch-organisatorischen Besonderheiten gelegt. 
+Besonders bietet sich diese Form an, wenn datenschutzkritische Prozesse gesondert in einer Private Cloud und datenschutzunkritische Prozesse in einer Public Cloud bearbeitet werden können, da so die Einspar- sowie Skalierungsmöglichkeiten der Public Cloud genutzt werden und gleichzeitig die Datenexposition verhindert werden kann. Die Unterteilung von Geschäftsprozessen in diese Kategorien stellt dabei jedoch keine geringe Hürde dar. \cite{technet}
