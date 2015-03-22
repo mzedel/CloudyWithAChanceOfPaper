@@ -1,4 +1,102 @@
 \section{Verwandte Arbeiten}
 \label{sec_related_work}
 
-\IEEEPARstart{V}{erwandte} Arbeiten...
+\IEEEPARstart{D}{iese} Arbeit konzentriert sich darauf, die Produkte und Standpunkte verschiedener Anbieter im Bereich des Cloud Computing zu vergleichen. 
+Es gibt jedoch auch andere Arbeiten, welche sich von verschiedenen Gesichtspunkten aus mit dem Vergleich von Anbietern entsprechender Lösungen beschäftigt haben. 
+
+% binnig2009
+% Binnig et al. 2009
+%
+% - Benchmark für Cloud
+%	- herkömmlich (nicht für Cloud): durchschnittliche Performanz eines ausgelasteten, statischen Systems
+%	- für Cloud zu berücksichtigen: 
+%		- Fähigkeit, sich an wechselnde Belastung anzupassen (Performanz, Kosten)
+%		- Robustheit hinsichtlich Ausfall einzelner Knoten / des Rechenzentrums
+%	- nicht nur Speicherdienste, sondern Gesamtheit der Webapplikationen, auch im Hinblick auf Web 2.0
+% - Ziel einer Benchmark für die Cloud
+%	- Anbieter unterscheiden sich durch: Kosten, Performanz, Konsistenz-Garantien, Lastverteilung, Caching, Fehlertoleranz, Programmiersprachen, Service Level Agreements
+%	- Ziel: Entwicklern helfen, die richtige Architekturen / Services zu wählen
+%	- Problem: unterschiedliche Modelle (z.B. Kostenmodelle für ?aaS), brauchen neue Methoden um herkömmliche Größen zu messen
+% - u.a. Belastungsspitzen berücksichtigen
+
+Um Cloud Anbieter von einem technischen Standpunkt aus überhaupt vergleichen zu können, ist es nötig, eine geeignete Benchmark zur Verfügung zu haben. 
+Binnig et al.\cite{binnig2009} haben 2009 dargelegt, dass es nicht ausreichend sei, eine Benchmark zu verwenden, welche lediglich die durchschnittliche Performanz eines ausgelasteten, statischen Systems testet. 
+Vielmehr sei es erforderlich, die Fähigkeit eines Systems, sich an wechselnde Belastungen, insbesondere auch Spitzenlasten, anzupassen, zu berücksichtigen. 
+Auch die Robustheit hinsichtlich des Ausfalls einzelner Knoten oder eines gesamten Rechenzentrums müsse erfasst werden. 
+Da sich verschiedene Anbieter durch Kostenmodelle, Performanz, Garantien zur Datenkonsistenz, Lastverteilung, Caching, Fehlertoleranz, Service Level Agreements und schließlich auch verwendete Programmiersprachen unterscheiden, sei eine Benchmark zum Vergleich von Cloud Angeboten notwendig, um Kunden bei der Auswahl geeigneter Architekturen beziehungsweise Services zu unterstützen. 
+
+% li2010
+% Li et al. 2010
+%
+% - Motivation
+%	- Infrastruktur, Virtualisierung, Services von unterschiedlichen Anbietern auf unterschiedliche Weise angeboten
+%	- Kunden sollen Möglichkeit haben, passende Cloud zu wählen
+% - CloudCmp
+%	- Ziel: Performanz und Kosten vergleichen bzw. Kosten-Nutzen-Abwägung ermöglichen
+%	- misst Elastizität, Speicherplatz, Netzwerkservices von Anbietern
+% - Vergleich von 4 Anbietern
+%	- Amazon AWS, Microsoft Azure, Google AppEngine, Rackspace CloudServers
+%	- allgemein angebotene Dienste
+%		- elastische Cluster, welche Anwendungen ausführen
+%		- Speicher
+%		- Intranet zwischen Anwendungsinstanzen
+%		- Wide-Area Network zwischen verschiedenen Datencentern zur Übertragung an Benutzer
+%	- sehr unterschiedliche Umsetzungen
+%	- was ist zu messen: Performanzdimensionen statt Arten der Umsetzung
+%		-> Metriken z.B. Netzwerklatenz, Bandbreite, Antwortzeiten, Kosten
+% - anonymisierte Ergebnisse, u.a.:
+%	- unterschiedliche Kosteneffizienz, z.B. doppelte Geschwindigkeit einer Virtualisierungsinstanz für 30% mehr Kosten
+%	- unterschiedliche Speichergeschwindigkeiten, teilweise eine Größenordnung
+%	- sehr unterschiedliche Bandbreite im Intranet
+% - Autoren argumentieren, dass das Tool in konkreten Use Cases die Wahl einer geeigneten Cloud unterstützen kann
+
+2010 haben Li et al. das Tool CloudCmp vorgestellt\cite{li2010}, welches einen derartigen Vergleich ermöglichen soll. 
+Als allgemein angebotene Dienste wurden zum Einen elastische, also hinsichtlich der Datenlast skalierbare, Cluster zur Ausführung von Anwendungen identifiziert, sowie weiterhin die Bereitstellung von Speicherplatz, Intranet zwischen Anwendungsinstanzen sowie das Wide-Area Network zwischen verschiedenen Rechenzentren zur Übertragung an Benutzer.
+Um die Performanz dieser Dienste einschätzen zu können, wurden wiederum verschiedene Metriken wie Netzwerklatenz, Bandbreite und Antwortzeiten festgelegt, zudem wurden die jeweiligen Kosten gemessen.
+Verglichen wurden Amazon AWS, Microsoft Azure, Google AppEngine und Rackspace CloudServers, wobei die Ergebnisse anonymisiert wurden. 
+So ergab sich beispielsweise, dass sich die Geschwindigkeit bei der Speicherung von Daten teilweise um eine Größenordnung unterschied, sehr verschiedene Bandbreiten im jeweiligen Intranet vorlagen und die Kosteneffizienz bei den Ausführungsclustern sehr unterschiedlich war. 
+Die Autoren argumentieren, dass bei der Auswahl eines Cloud Anbieters Abwägungen abhängig vom Anwendungsfall getroffen werden müssen und CloudCmp eben dabei helfen könne.
+
+% garg2011
+% Garg et al. 2011
+%
+% - Auswahl einer Cloud hängt von Nutzerbedürfnissen ab
+% - SMICloud
+%	- Ziel: Anbieter gemäß Bedürfnissen beurteilen und sortieren
+% - Servicequalität anhand verschiedener Leistungskennzahlen beurteilen:
+%	- gemäß damaligem Service Measurement Index (http://www.cloudcommons.com/de/about-smi) (Cloud Service Measurement Index Consortium )
+%	- Verantwortlichkeit, Agilität, Performanz, Kosten, Zuverlässigkeit, Sicherheit und Datenschutz, Benutzerfreundlichkeit
+%	- keine vorgegebenen Metriken / Messmethoden -> Framework SMICloud
+
+Auch Garg et al. gehen auf die Notwendigkeit für Benutzer ein, einen Anbieter anhand spezifischer Bedürfnisse auszuwählen. 
+Mit SMICloud haben sie 2011 ein Framework vorgestellt\cite{garg2011}, welches es ermöglichen soll, eine Rangordnung von Anbietern hinsichtlich gewisser Leistungskennzahlen anzufertigen. 
+Diese Leistungskennzahlen orientieren sich am damaligen Stand des Service Measurement Index\footnote{\url{http://www.cloudcommons.com/de/about-smi}} des Cloud Service Measurement Index Consortium und umfassen Verantwortlichkeit, Agilität, Performanz, Kosten, Zuverlässigkeit, Sicherheit und Datenschutz sowie Benutzerfreundlichkeit.
+
+% zenuni2014
+% Zenuni et al. 2014
+%
+% - Vergleich von Datenspeicher-Anbietern
+% - Kriterien
+%	- Sicherheit
+%	- Verfügbarkeit
+%	- Service Level Agreement
+%	- Schnittstellen
+%	- Kostenloser und maximaler Speicherplatz
+%	- Maximale Dateigröße
+%	- Kostenmodelle
+%	- Unterstützung mobiler Geräte
+%	- Plattformkompatibilität
+% - Methodik von Zhang et al (zhang2013)
+% - u.a. Google Drive, DropBox und SugarSync
+% - Erkenntnisse
+%	- Sicherheitsstandards variieren (z.B. Verschlüsselung oder nicht)
+%	- Preismodelle variieren stark (monatlich, jährlich, mindestens 2 Jahre...)
+%	- mobile Geräte: überall unterstützt, aber nicht überall alle Systeme
+
+2014 haben Zenuni et al. einen Vergleich von Cloud Angeboten durchgeführt, allerdings nicht im Kontext der Virtualisierung, sondern der Bereitstellung von Speicherplatz\cite{zenuni2014}. 
+Dabei wurden unter anderem Anbieter wie Google Drive\footnote{\url{https://www.google.com/intl/de_de/drive/}}, DropBox\footnote{\url{https://www.dropbox.com/}} und SugarSync\footnote{\url{https://www.sugarsync.com/}} anhand der Methodik von Zhang et al.\cite{zhang2013} untersucht. 
+Die verwendeten Kriterien umfassten Sicherheit, Verfügbarkeit, Service Level Agreements, Schnittstellen, kostenlosen sowie maximalen Speicherplatz, maximale Dateigröße, Kostenmodelle, Kompatibilität zu Plattformen sowie die Unterstützung mobiler Geräte. 
+Es ergab sich unter anderem, dass die verwendeten Sicherheitsstandards zwischen Anbietern variieren, beispielsweise dahingehend, ob Verschlüsselung angeboten wurde oder nicht. 
+Auch Preismodelle lagen in unterschiedlichen Ausprägungen vor, wie monatlicher oder jährlicher Abrechnung sowie mehrjährigen Mindestlaufzeiten. 
+Mobile Systeme wurden von allen getesteten Anbietern unterstützt, allerdings fanden einige Systeme, wie zum Beispiel BlackBerry, nicht bei sämtliche Anbietern Unterstützung. 
+Die Autoren schlussfolgern, dass es für Anwender notwendig sei, die Unterschiede zwischen den jeweiligen Anbietern zu kennen und entsprechend abzuwägen. 
