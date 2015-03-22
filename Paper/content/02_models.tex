@@ -1,14 +1,14 @@
-\section{$\{I|P|S\}$aaS}
+\section{Service Models}
 \label{sec_service_models}
 
 \IEEEPARstart{Ü}{blicherweise} wird Cloud Computing als Schichtenmodell (vergl. Figure~\ref{fig:serviceModels}) beschrieben, bei dem Schichten durch die Service Modelle charakterisiert werden. Die unterste Schicht bildet die Infrastruktur der Lösung, bestehend aus der zum Betrieb nötigen Hard- und Software. Die darüber liegende Schicht wird als Plattform bezeichnet, sie besteht für gewöhnlich aus einer Sammlung an Werkzeugen und Diensten mit denen das Programmieren und Bereitstellen neuer Cloudanwendungen vereinfacht und beschleunigt wird. Auf diesen beiden Schichten befindet sich die Software Schicht, mit der Endnutzer in Form von bestehenden Webapplikationen interagieren.
 
-\begin{figure*}
+\begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{images/serviceModels}
+	\includegraphics[width=0.95\linewidth]{images/cloudcomputestackimage1}
 	\caption{Übersicht Schichten der Servicemodelle}
 	\label{fig:serviceModels}
-\end{figure*}
+\end{figure}
 
 Auch wenn diese Schichten nicht zusammen genutzt werden müssen, erschließt sich der Zusammenhang jedoch leicht anhand einer Analogie mit der Berliner S-Bahn: Die Schienen bilden die Infrastruktur, die darauf befindlichen Züge stellen die Plattform dar und das S-Bahn Personal, welches die Züge betreibt und so Fahrgäste transportiert dient als Software, welche die ihr zugewiesenen Schienen und Züge nutzt. Im Fall eines Schienenbruchs könnten die Züge auf anderen Strecken zum Einsatz kommen und das Personal könnte auf anderen Verbindungen eingesetzt werden um Fahrgäste zu transportieren.
 
@@ -18,8 +18,6 @@ Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Mod
 
 \begin{figure*}
 	\centering
-	\caption{Übersicht der Service Arten}
-	\label{serivceModelsTable}
 	\begin{tabular}{|l|>{\RaggedRight}p{2cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{3cm}|}
 		\hline
 		\rule[-2ex]{0pt}{5.5ex} & \textbf{Paradigmen- wechsel} & \textbf{Merkmale} & \textbf{Vorteile} & \textbf{Nachteile \newline und Risiken} & \textbf{Nicht zu empfehlen bei} \\ 
@@ -29,8 +27,11 @@ Im folgenden Teil der Arbeit werden die verschiedenen Schichten bzw. Service Mod
 		\rule[-2ex]{0pt}{5.5ex} PaaS & Lizenzierung & Nutzt Cloud Infrastruktur; eignet sich besonders für agiles Projektmanagement & optimierte Produktveröffentlichung & Zentralisierung erfordert neue Sicherheitsmaßnahmen & - \\ 
 		\hline
 		\rule[-2ex]{0pt}{5.5ex} SaaS & Besitzverhältnis der Software & Service Level Agreements; Oberfläche meist durch Browser dargestellt; greift auf weitere Cloud Komponenten zu; Kommunikation durch APIs; Zustandslos & Entwicklungskosten können umgangen werden; ROI Risiken werden verschoben; iterative Updates; optimierte Aktualisierung & Zentralisierung der Daten erfordert neue Maßnahmen für die Datensicherheit & - \\ 
-		\hline 
+		\hline
+
 	\end{tabular}
+	\label{serivceModelsTable}
+	\caption{Übersicht der Service Arten}
 \end{figure*}
  
  
@@ -83,9 +84,6 @@ Neben den hier aufgeführten Modellen wird das Servicemodell auch in anderen For
 Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der einzelnen Bereitstellungsmodelle. Abhängig von der Bereitstellung variieren die Kosten, die Kontrollmöglichkeit und die Skalierbarkeit.
 
 \begin{figure*}
-	\centering
-	\caption{Deployment Arten Übersicht}
-	\label{deploymentTypesTable}
 	\begin{tabular}{|>{\RaggedRight}p{3cm}|>{\RaggedRight}p{1.6cm}|>{\RaggedRight}p{2.2cm}|>{\RaggedRight}p{2.5cm}|>{\RaggedRight}p{2.7cm}|>{\RaggedRight}p{3cm}|}
 		\hline
 		\rule[-2ex]{0pt}{5.5ex} \textbf{Art der \newline  Bereitstellung} & \textbf{Hosting} & \textbf{Geteilt oder Dediziert} & \textbf{Kontrolle über Architektur} & \textbf{Skalierbarkeit} & \textbf{Art der Investition} \\ 
@@ -100,6 +98,9 @@ Aus diesen Unterscheidungen ergeben sich ferner weitere Charakteristiken der ein
 		\hline \rule[-2ex]{0pt}{5.5ex} Private Appliance & Intern & Dediziert & Cloudanbieter & Angebotsabhängig & Vertragsabhängig, möglicherweise mit Auswirkung auf Barvermögen \\ 
 		\hline 
 	\end{tabular}
+	\centering
+	\caption{Deployment Arten Übersicht}
+	\label{deploymentTypesTable}
 \end{figure*}
 
 \subsection{Public Cloud}
